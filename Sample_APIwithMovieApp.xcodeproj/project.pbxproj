@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		1DD737A42C39D41000B13050 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD737A32C39D41000B13050 /* AppDelegate.swift */; };
 		1DD737A62C39D41000B13050 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD737A52C39D41000B13050 /* SceneDelegate.swift */; };
-		1DD737A82C39D41000B13050 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD737A72C39D41000B13050 /* ViewController.swift */; };
+		1DD737A82C39D41000B13050 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD737A72C39D41000B13050 /* HomeScreenViewController.swift */; };
 		1DD737AB2C39D41000B13050 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1DD737AA2C39D41000B13050 /* Base */; };
 		1DD737AD2C39D41100B13050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DD737AC2C39D41100B13050 /* Assets.xcassets */; };
 		1DD737B02C39D41100B13050 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1DD737AF2C39D41100B13050 /* Base */; };
+		1DD737BE2C39D5FA00B13050 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DD737BD2C39D5FA00B13050 /* Colors.xcassets */; };
+		1DD737C62C39D69700B13050 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD737C52C39D69700B13050 /* LoginScreenViewController.swift */; };
+		1DD737C82C39D6A500B13050 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD737C72C39D6A500B13050 /* LoginScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1DD737A02C39D41000B13050 /* Sample_APIwithMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample_APIwithMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DD737A32C39D41000B13050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DD737A52C39D41000B13050 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1DD737A72C39D41000B13050 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1DD737A72C39D41000B13050 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		1DD737AA2C39D41000B13050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DD737AC2C39D41100B13050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DD737AF2C39D41100B13050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DD737B12C39D41100B13050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DD737BD2C39D5FA00B13050 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		1DD737C52C39D69700B13050 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		1DD737C72C39D6A500B13050 /* LoginScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,114 @@
 		1DD737A22C39D41000B13050 /* Sample_APIwithMovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				1DD737A32C39D41000B13050 /* AppDelegate.swift */,
-				1DD737A52C39D41000B13050 /* SceneDelegate.swift */,
-				1DD737A72C39D41000B13050 /* ViewController.swift */,
+				1DD737B72C39D59100B13050 /* Application */,
+				1DD737B82C39D59B00B13050 /* DesignableUI */,
+				1DD737B92C39D5A400B13050 /* Modules */,
+				1DD737BA2C39D5AB00B13050 /* UIComponents */,
+				1DD737BB2C39D5B500B13050 /* Helper */,
+				1DD737BC2C39D5C100B13050 /* Resource */,
+				1DD737A72C39D41000B13050 /* HomeScreenViewController.swift */,
 				1DD737A92C39D41000B13050 /* Main.storyboard */,
 				1DD737AC2C39D41100B13050 /* Assets.xcassets */,
 				1DD737AE2C39D41100B13050 /* LaunchScreen.storyboard */,
 				1DD737B12C39D41100B13050 /* Info.plist */,
 			);
 			path = Sample_APIwithMovieApp;
+			sourceTree = "<group>";
+		};
+		1DD737B72C39D59100B13050 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1DD737A32C39D41000B13050 /* AppDelegate.swift */,
+				1DD737A52C39D41000B13050 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1DD737B82C39D59B00B13050 /* DesignableUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DesignableUI;
+			sourceTree = "<group>";
+		};
+		1DD737B92C39D5A400B13050 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1DD737BF2C39D62D00B13050 /* LoginScreenModule */,
+				1DD737C02C39D63A00B13050 /* HomeScreenModule */,
+				1DD737C12C39D64400B13050 /* UpcomingScreenModule */,
+				1DD737C22C39D64F00B13050 /* SearchScreenModule */,
+				1DD737C32C39D65E00B13050 /* DownloadScreenModule */,
+				1DD737C42C39D66D00B13050 /* ProfileScreenModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1DD737BA2C39D5AB00B13050 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		1DD737BB2C39D5B500B13050 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		1DD737BC2C39D5C100B13050 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1DD737BD2C39D5FA00B13050 /* Colors.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		1DD737BF2C39D62D00B13050 /* LoginScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				1DD737C52C39D69700B13050 /* LoginScreenViewController.swift */,
+				1DD737C72C39D6A500B13050 /* LoginScreen.storyboard */,
+			);
+			path = LoginScreenModule;
+			sourceTree = "<group>";
+		};
+		1DD737C02C39D63A00B13050 /* HomeScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeScreenModule;
+			sourceTree = "<group>";
+		};
+		1DD737C12C39D64400B13050 /* UpcomingScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UpcomingScreenModule;
+			sourceTree = "<group>";
+		};
+		1DD737C22C39D64F00B13050 /* SearchScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchScreenModule;
+			sourceTree = "<group>";
+		};
+		1DD737C32C39D65E00B13050 /* DownloadScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DownloadScreenModule;
+			sourceTree = "<group>";
+		};
+		1DD737C42C39D66D00B13050 /* ProfileScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileScreenModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +231,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DD737AD2C39D41100B13050 /* Assets.xcassets in Resources */,
+				1DD737BE2C39D5FA00B13050 /* Colors.xcassets in Resources */,
 				1DD737B02C39D41100B13050 /* Base in Resources */,
+				1DD737C82C39D6A500B13050 /* LoginScreen.storyboard in Resources */,
 				1DD737AB2C39D41000B13050 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +245,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DD737A82C39D41000B13050 /* ViewController.swift in Sources */,
+				1DD737A82C39D41000B13050 /* HomeScreenViewController.swift in Sources */,
 				1DD737A42C39D41000B13050 /* AppDelegate.swift in Sources */,
+				1DD737C62C39D69700B13050 /* LoginScreenViewController.swift in Sources */,
 				1DD737A62C39D41000B13050 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

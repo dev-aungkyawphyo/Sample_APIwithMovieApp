@@ -72,8 +72,6 @@
 				1DD737BA2C39D5AB00B13050 /* UIComponents */,
 				1DD737BB2C39D5B500B13050 /* Helper */,
 				1DD737BC2C39D5C100B13050 /* Resource */,
-				1DD737A72C39D41000B13050 /* HomeScreenViewController.swift */,
-				1DD737A92C39D41000B13050 /* Main.storyboard */,
 				1DD737AC2C39D41100B13050 /* Assets.xcassets */,
 				1DD737AE2C39D41100B13050 /* LaunchScreen.storyboard */,
 				1DD737B12C39D41100B13050 /* Info.plist */,
@@ -144,6 +142,8 @@
 		1DD737C02C39D63A00B13050 /* HomeScreenModule */ = {
 			isa = PBXGroup;
 			children = (
+				1DD737A72C39D41000B13050 /* HomeScreenViewController.swift */,
+				1DD737A92C39D41000B13050 /* Main.storyboard */,
 			);
 			path = HomeScreenModule;
 			sourceTree = "<group>";

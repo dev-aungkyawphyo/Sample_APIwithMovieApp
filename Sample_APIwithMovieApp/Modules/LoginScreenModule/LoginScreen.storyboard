@@ -29,7 +29,7 @@
                                                 <color key="textColor" name="PrimaryTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Example@gmail.com" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="4R9-cu-CoV" customClass="DesignableTextFields" customModule="Enjoy_Cafe" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Example@gmail.com" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="4R9-cu-CoV" customClass="DesignableTextFields" customModule="Sample_APIwithMovieApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="35" width="353" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="bSl-iV-Svh"/>
@@ -58,7 +58,7 @@
                                                 <color key="textColor" name="PrimaryTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="xxxxxxxx" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h5f-qk-bQb" customClass="DesignableTextFields" customModule="Enjoy_Cafe" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="xxxxxxxx" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h5f-qk-bQb" customClass="DesignableTextFields" customModule="Sample_APIwithMovieApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="35" width="353" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="wJQ-ZR-YXI"/>
@@ -108,6 +108,9 @@
                                     <color key="baseForegroundColor" name="BtnTextColor"/>
                                     <color key="baseBackgroundColor" name="PrimaryColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTappedLoginBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YfN-2a-0oK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2n3-cK-Kyk">
                                 <rect key="frame" x="213" y="429" width="160" height="42.333333333333314"/>
@@ -126,19 +129,25 @@
                                             <constraint firstAttribute="height" constant="45" id="4jh-nD-c9w"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="google" title="Login with Google" imagePadding="10">
+                                        <buttonConfiguration key="configuration" style="plain" image="google" title="Continue with Google" imagePadding="10">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                             <color key="baseForegroundColor" name="PrimaryTextColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTappedGoogleLoginBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hmd-e4-2mn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUr-Bv-I6B">
                                         <rect key="frame" x="0.0" y="65" width="313" height="46"/>
                                         <color key="backgroundColor" name="SearchBarBGColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="facebook" title="Login with Facebook" imagePadding="10">
+                                        <buttonConfiguration key="configuration" style="plain" image="facebook" title="Continue with Facebook" imagePadding="10">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                             <color key="baseForegroundColor" name="PrimaryTextColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTappedFbLoginBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xvj-80-oGh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -194,6 +203,14 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailErrorLabel" destination="pBB-EQ-uoo" id="OZ3-c6-Xwv"/>
+                        <outlet property="emailTextField" destination="4R9-cu-CoV" id="wbB-4i-WNd"/>
+                        <outlet property="loginInWithFbBtn" destination="tUr-Bv-I6B" id="Uhx-ct-KfC"/>
+                        <outlet property="loginInWithGoogleBtn" destination="cLZ-ij-xI0" id="7zV-aP-WGb"/>
+                        <outlet property="passwordErrorLabel" destination="Vpd-bx-GRo" id="0oW-lF-ohc"/>
+                        <outlet property="passwordTextField" destination="h5f-qk-bQb" id="s1h-pz-RGN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -222,7 +239,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
